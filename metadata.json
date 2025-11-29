@@ -1,0 +1,8 @@
+{
+  "name": "DailyHealth AI",
+  "description": "Your AI-powered daily health ecosystem. Featuring Dietitian, Trainer, Sleep, Counselor, and Medical agents.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
