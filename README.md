@@ -43,6 +43,7 @@ https://dailyhealth-ai-672214102683.us-west1.run.app/
 # Instruction
 
 ### Demo in YouTube video: 
+https://www.youtube.com/shorts/yDilStyoBCM
 
 ### Demo in images:
 
