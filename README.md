@@ -1,5 +1,5 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+<img width="1200" alt="Overview" src="Overview.png" />
 </div>
 
 # Problem
@@ -20,18 +20,19 @@ The project implements key concepts from the [AI Agents Intensive course](https:
 
 # Set up
 
-* View app in Google AI Studio: https://ai.studio/apps/drive/1cKOVrcPRArWwCj1XXFs6Tg1zYPtsh3p7
+### View app in Google AI Studio
+https://ai.studio/apps/drive/1cKOVrcPRArWwCj1XXFs6Tg1zYPtsh3p7
 
 <div align="center">
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-* Run on Google Cloud: https://dailyhealth-ai-672214102683.us-west1.run.app/
+### Run on Google Cloud
+https://dailyhealth-ai-672214102683.us-west1.run.app/
 
-* Run Locally
+### Run Locally:
 
 **Prerequisites:**  Node.js
-
 
 1. Install dependencies:
    `npm install`
@@ -41,26 +42,54 @@ The project implements key concepts from the [AI Agents Intensive course](https:
 
 # Instruction
 
-* Demo in YouTube video: 
+### Demo in YouTube video: 
 
-* Demo in images:
+### Demo in images:
 
+**Authentication & Privacy:** Secure login ensures sensitive health data remains private.
+<div align="center">
+<img width="250" alt="Login" src="Login.png" />
+</div>
 
+**Onboarding:** The system establishes a baseline by capturing demographics and goals, which initiates the long-term memory context.
+<div align="center">
+<img width="250" alt="Background1" src="Background1.png" />
+<img width="250" alt="Background2" src="Background2.png" />
+<img width="250" alt="Background3" src="Background3.png" />
+</div>
 
-**Authentication & Privacy:** (Image 1) Secure login ensures sensitive health data remains private.
+**Dietitian Agent:** Utilizing Gemini’s vision capabilities, this agent analyzes food photos to extract calories and macros, updating the user’s nutritional profile instantly.
+<div align="center">
+<img width="250" alt="Dietitian" src="Dietitian.png" />
+</div>
 
-**Onboarding:** (Images 2-4) The system establishes a baseline by capturing demographics and goals, which initiates the long-term memory context.
+**Trainer Agent:** This agent designs bespoke workouts based on real-time variables (energy levels, time constraints) and cross-references them with medical safety protocols.
+<div align="center">
+<img width="250" alt="Trainer" src="Trainer.png" />
+</div>
 
-**Dietitian Agent:** (Image 5) Utilizing Gemini’s vision capabilities, this agent analyzes food photos to extract calories and macros, updating the user’s nutritional profile instantly.
+**Sleep Specialist:** Beyond tracking duration, this agent performs qualitative analysis, including Jungian dream interpretation.
+<div align="center">
+<img width="250" alt="Sleep" src="Sleep.png" />
+</div>
 
-**Trainer Agent:** (Image 6) This agent designs bespoke workouts based on real-time variables (energy levels, time constraints) and cross-references them with medical safety protocols.
+**Counselor Agent:** A dedicated mental health support interface that tracks emotional valence and provides empathetic dialogue.
+<div align="center">
+<img width="250" alt="Counselor" src="Counselor.png" />
+</div>
 
-**Sleep Specialist:** (Image 7) Beyond tracking duration, this agent performs qualitative analysis, including Jungian dream interpretation.
+**Medical Specialist:** This agent ingests complex medical documents (like test results) to update the user's risk profile and answers clinical questions.
+<div align="center">
+<img width="250" alt="Medical" src="Medical.png" />
+</div>
 
-**Counselor Agent:** (Image 8) A dedicated mental health support interface that tracks emotional valence and provides empathetic dialogue.
+**The Consensus Meeting:** The core feature where the Coordinator Agent leads a synthesis of all data streams, producing a strategic executive summary.
+<div align="center">
+<img width="250" alt="Meeting1" src="Meeting1.png" />
+<img width="250" alt="Meeting2" src="Meeting2.png" />
+</div>
 
-**Medical Specialist:** (Image 9) This agent ingests complex medical documents (like test results) to update the user's risk profile and answers clinical questions.
-
-**The Consensus Meeting:** (Images 10-11) The core feature where the Coordinator Agent leads a synthesis of all data streams, producing a strategic executive summary.
-
-**Archival Memory:** (Image 12) Daily summaries are compressed and archived, allowing the system to detect long-term trends.
+**Archival Memory:** Daily summaries are compressed and archived, allowing the system to detect long-term trends.
+<div align="center">
+<img width="250" alt="Record" src="Record.png" />
+</div>
