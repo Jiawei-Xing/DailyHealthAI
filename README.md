@@ -91,5 +91,6 @@ https://dailyhealth-ai-672214102683.us-west1.run.app/
 
 **Archival Memory:** Daily summaries are compressed and archived, allowing the system to detect long-term trends.
 <div align="center">
+<img width="250" alt="Profile" src="Profile.png" />
 <img width="250" alt="Record" src="Record.png" />
 </div>
