@@ -28,7 +28,7 @@ https://ai.studio/apps/drive/1cKOVrcPRArWwCj1XXFs6Tg1zYPtsh3p7
 </div>
 
 ### Run on Google Cloud:
-https://dailyhealth-ai-672214102683.us-west1.run.app/
+This app is deployed on Google Cloud by Google AI Studio: https://dailyhealth-ai-672214102683.us-west1.run.app/
 
 ### Run Locally:
 
