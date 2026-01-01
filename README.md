@@ -96,3 +96,9 @@ https://www.youtube.com/shorts/yDilStyoBCM
 <img width="250" alt="Profile" src="img/Profile.png" />
 <img width="250" alt="Record" src="img/Record.png" />
 </div>
+
+# Future work
+* Tool Integration: Currently, the agents rely on LLM knowledge. I would integrate Model Context Protocol (MCP) to connect specialized tools to increase accuracy, such as Apple Health for biometric data, Apple Fitness for exercises, and Cal AI for exact calorie counting.
+* Agent-to-Agent (A2A) Protocol: I would implement a chat loop where agents can debate. For example, the Trainer could propose a workout, and the Medical Agent could veto it based on a new symptom, requiring the Trainer to regenerate the plan before presenting it to the user.
+* Evaluation Framework: I would implement automated eval sets to ensure that advice remains medically safe and consistent with the user's history over long periods.
+* Privacy & Compliance: Given the sensitivity of medical data, I would implement HIPAA-compliant encryption and local-first data storage options.
