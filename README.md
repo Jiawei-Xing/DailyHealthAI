@@ -11,7 +11,7 @@ Personal health is a multimodal challenge involving distinct, complex domains: n
 # Architecture
 I built DailyHealth AI, a comprehensive health ecosystem powered by the Google Gemini API. The architecture utilizes a Multi-Agent System consisting of five specialists: a Dietitian, Trainer, Sleep Specialist, Counselor, and Medical Specialist (all defined in `geminiService.ts`). These agents operate sequentially throughout the day to ingest multimodal user data (images, text, metrics). At the end of the day, a Lead Coordinator Agent aggregates these distinct logs, retrieves long-term context (medical history), and synthesizes a "Daily Board Meeting" report. This generates a cohesive strategy for the user's next day, ensuring that advice from one domain (e.g., exercise) is safe given the context of another (e.g., medical conditions).
 
-The project implements key concepts from the [5-Day AI Agents Intensive Course with Google](https://www.kaggle.com/competitions/agents-intensive-capstone-project/overview#agents-intensive-course-capstone-2025/):
+The project implements key concepts of AI agents:
 
 * Multi-Agent System: Five distinct personas powered by Gemini 2.5 Flash and Pro models work in parallel to gather data, with a sequential Coordinator agent handling synthesis.
 * Sessions & Memory: I implemented a robust state management system where static context (medical history) and episodic memory (daily summaries) are persisted and retrieved to ground agent responses.
