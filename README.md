@@ -13,10 +13,10 @@ I built DailyHealth AI, a comprehensive health ecosystem powered by the Google G
 
 The project implements key concepts of AI agents:
 
-* Multi-Agent System: Five distinct personas powered by Gemini Flash and Pro models work in parallel to gather data, with a sequential Coordinator agent handling synthesis.
+* Multi-Agent System: Five distinct personas powered by Gemini Flash and Pro models work in parallel to gather data, with a sequential Coordinator agent handling synthesis. Specifically, the medical agent is powered by **MedGemma**, allowing it to answer health-related questions from users.
 * Sessions & Memory: I implemented a robust state management system where static context (medical history) and episodic memory (daily summaries) are persisted and retrieved to ground agent responses.
 * Context Engineering: To manage context window limits, daily detailed logs are "compacted" into executive summaries before being stored in long-term memory.
-* Deployment: The application is live and hosted on Google Cloud Run.
+* Deployment: The application is live and hosted on Google AI Studio.
 
 # Set up
 
@@ -26,9 +26,6 @@ https://ai.studio/apps/drive/1cKOVrcPRArWwCj1XXFs6Tg1zYPtsh3p7?fullscreenApplet=
 <div align="center">
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
-
-### Run on Google Cloud:
-This app is deployed on Google Cloud by Google AI Studio: https://dailyhealth-ai-672214102683.us-west1.run.app/
 
 ### Run Locally:
 
