@@ -158,7 +158,7 @@ export const generateJournalEntry = async (chatHistory: string): Promise<string>
 export const consultMedicalAgent = async (profile: UserProfile, question: string): Promise<string> => {
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-3-pro-preview', // Using Pro for medical reasoning
+      model: 'med-gemma-2b-it', // Using MedGemma for specialized medical reasoning
       contents: `
         You are an AI Medical Assistant. 
         User Context: 
