@@ -8,7 +8,7 @@ const ai = new GoogleGenAI({ apiKey });
 export const analyzeFoodImage = async (base64Image: string): Promise<Partial<FoodEntry>> => {
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3-flash',
       contents: {
         parts: [
           { inlineData: { mimeType: 'image/jpeg', data: base64Image } },
@@ -44,7 +44,7 @@ export const analyzeFoodImage = async (base64Image: string): Promise<Partial<Foo
 export const analyzeFoodText = async (description: string): Promise<Partial<FoodEntry>> => {
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3-flash',
       contents: `Analyze this food description: "${description}". Estimate the name, calories, protein (g), carbs (g), and fats (g). Return strictly JSON.`,
       config: {
         responseMimeType: 'application/json',
@@ -77,7 +77,7 @@ export const generateWorkout = async (profile: UserProfile, mood: string): Promi
   try {
     const context = `User: ${profile.age}yo, ${profile.gender}. History: ${profile.medicalHistory}. Goals: ${profile.goals.join(', ')}`;
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3-flash',
       contents: `Design a quick 20-minute home workout for this user. Context: ${context}. Current Mood: ${mood}. Ensure exercises are safe for their medical history. Format as a clear list.`,
     });
     return response.text || "Could not generate workout.";
@@ -90,7 +90,7 @@ export const generateWorkout = async (profile: UserProfile, mood: string): Promi
 export const calculateExerciseStats = async (description: string, duration: number): Promise<Partial<ExerciseEntry>> => {
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3-flash',
       contents: `Calculate estimated calories burned for: "${description}" performed for ${duration} minutes. Return JSON.`,
       config: {
         responseMimeType: 'application/json',
@@ -115,7 +115,7 @@ export const calculateExerciseStats = async (description: string, duration: numb
 export const analyzeDream = async (dreamText: string): Promise<string> => {
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3-flash',
       contents: `Act as a Jungian dream analyst. Briefly interpret this dream: "${dreamText}". Keep it under 100 words.`,
     });
     return response.text || "No interpretation available.";
@@ -128,7 +128,7 @@ export const analyzeDream = async (dreamText: string): Promise<string> => {
 export const chatWithCounselor = async (history: {role: string, parts: {text: string}[]}[], message: string): Promise<string> => {
   try {
     const chat = ai.chats.create({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3-flash',
       history: history,
       config: {
         systemInstruction: "You are a compassionate, empathetic mental health counselor agent. Keep responses concise, warm, and supportive. Do not give medical prescriptions.",
@@ -145,7 +145,7 @@ export const chatWithCounselor = async (history: {role: string, parts: {text: st
 export const generateJournalEntry = async (chatHistory: string): Promise<string> => {
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3-flash',
       contents: `Based on this chat history, write a reflective daily journal entry from the user's perspective. Capture the key emotions and thoughts discussed. \n\n Chat: ${chatHistory}`,
     });
     return response.text || "Could not generate journal.";
@@ -158,7 +158,7 @@ export const generateJournalEntry = async (chatHistory: string): Promise<string>
 export const consultMedicalAgent = async (profile: UserProfile, question: string): Promise<string> => {
   try {
     const response = await ai.models.generateContent({
-      model: 'med-gemma-2b-it', // Using MedGemma for specialized medical reasoning
+      model: 'gemini-3-pro', // Using Pro for specialized medical reasoning
       contents: `
         You are an AI Medical Assistant. 
         User Context: 
@@ -184,7 +184,7 @@ export const consultMedicalAgent = async (profile: UserProfile, question: string
 export const analyzeMedicalResult = async (base64Image: string): Promise<string> => {
     try {
       const response = await ai.models.generateContent({
-        model: 'gemini-3-pro-preview', // Using Pro for complex document analysis
+        model: 'gemini-3-pro', // Using Pro for complex document analysis
         contents: {
           parts: [
             { inlineData: { mimeType: 'image/jpeg', data: base64Image } },
@@ -251,7 +251,7 @@ export const synthesizeDailyReport = async (state: AppState): Promise<string> =>
     `;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-3-pro-preview',
+      model: 'gemini-3-pro',
       contents: prompt,
     });
 
@@ -281,7 +281,7 @@ export const askCoordinator = async (state: AppState, question: string): Promise
     `;
 
     const response = await ai.models.generateContent({
-        model: 'gemini-3-pro-preview',
+        model: 'gemini-3-pro',
         contents: prompt
     });
     return response.text || "I couldn't reach the team right now.";
